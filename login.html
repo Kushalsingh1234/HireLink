@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — HireLink</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">HL</span>
+        <span class="brand-text">HireLink</span>
+      </a>
+
+      <button id="mobileToggle" class="mobile-toggle">☰</button>
+
+      <nav id="mainNav" class="main-nav">
+        <a href="students.html">Find Students</a>
+        <a href="startups.html">For Startups</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="certificates.html">Certificates</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container login-page">
+
+    <section class="login-box">
+
+      <h1 class="title">Welcome Back</h1>
+
+      <p class="muted small" style="text-align:center;margin-bottom:18px;">
+        Login to continue to your dashboard.
+      </p>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="login-form">
+
+        <div class="field">
+          <label>Email *</label>
+          <input type="email" id="email" required placeholder="your@email.com">
+        </div>
+
+        <div class="field">
+          <label>Password *</label>
+          <input type="password" id="password" required placeholder="Your password">
+        </div>
+
+        <div class="forgot-row">
+          <button type="button" id="forgotBtn" class="forgot-link">Forgot password?</button>
+        </div>
+
+        <button class="btn primary full" type="submit">Login</button>
+
+        <p class="muted small" style="text-align:center;margin-top:12px;">
+          Don't have an account?<br><br>
+          <a class="btn secondary" href="signup.html">Sign up</a>
+        </p>
+
+      </form>
+
+      <p id="loginMessage" class="muted small" style="margin-top:10px;text-align:center;"></p>
+
+    </section>
+  </main>
+
+
+  <!-- RESET PASSWORD MODAL -->
+  <div id="resetOverlay" class="overlay hidden">
+    <div class="reset-modal">
+      <h2>Reset Password</h2>
+      <p class="muted small">Enter your registered email to receive a reset link.</p>
+
+      <input type="email" id="resetEmail" class="reset-input" placeholder="your@email">
+
+      <div class="reset-actions">
+        <button type="button" id="sendReset" class="btn primary small">
+  Send Reset Link
+</button>
+
+        <button id="closeReset" class="btn ghost small">Cancel</button>
+      </div>
+
+      <p id="resetMessage" class="muted small" style="margin-top:10px;text-align:center;"></p>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>HireLink</strong></div>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="nav-auth.js"></script>
+  <script type="module" src="login.js"></script>
+
+</body>
+</html>

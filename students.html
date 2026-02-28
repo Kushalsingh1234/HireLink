@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Find Students — HireLink</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="student.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">HL</span>
+        <span class="brand-text">HireLink</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="students.html" class="active">Find Students</a>
+        <a href="startups.html">For Startups</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="certificates.html">Certificates</a>
+      </nav>
+
+      <div class="nav-ctas">
+        <a class="btn secondary" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container students-page">
+
+    <!-- HERO -->
+    <section class="students-hero">
+      <h1>Find talented students for your next project</h1>
+      <p class="muted">
+        Browse verified student profiles, portfolios, and hire instantly.
+      </p>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="students-filters">
+      <div class="filter-group">
+        <label for="professionFilter">Profession</label>
+        <select id="professionFilter">
+          <option value="all">All professions</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="sortFilter">Sort By</label>
+        <select id="sortFilter">
+          <option value="rating_desc">Highest rating</option>
+          <option value="rating_asc">Lowest rating</option>
+          <option value="fee_asc">Lowest fee</option>
+          <option value="fee_desc">Highest fee</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="skillsFilter">Skills</label>
+        <input
+          type="text"
+          id="skillsFilter"
+          placeholder="e.g. Figma, React, UI Design"
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="filter-group">
+        <label for="minFeeFilter">Minimum Fee (INR)</label>
+        <input type="number" id="minFeeFilter" min="0" step="100" placeholder="0" />
+      </div>
+
+      <div class="filter-group">
+        <label for="minRatingFilter">Minimum Rating</label>
+        <input type="number" id="minRatingFilter" min="0" max="5" step="0.1" placeholder="0.0" />
+      </div>
+
+      <button class="btn secondary small" id="clearFiltersBtn">Clear Filters</button>
+    </section>
+
+    <!-- GRID -->
+    <section class="students-grid" id="studentsGrid">
+      <!-- Cards injected via JS -->
+    </section>
+
+    <p id="studentsEmpty" class="muted" style="display:none;text-align:center;margin-top:24px;">
+      No students available yet.
+    </p>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>HireLink</strong></div>
+    </div>
+  </footer>
+
+  <script type="module" src="nav-auth.js"></script>
+  <script type="module" src="students.js"></script>
+</body>
+</html>

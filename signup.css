@@ -1,0 +1,75 @@
+/* signup.css — clean, modern, matches HireLink theme */
+
+.signup-page {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-box {
+  width: 100%;
+  max-width: 450px;
+  padding: 28px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+/* ROLE TOGGLE */
+.role-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e6eef6;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(90deg,#0ea5a4,#06b6d4);color:#02111a;
+  border: none;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* FORM */
+.signup-form .field {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.signup-form input {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e9f1f7;
+}
+
+.hidden {
+  display: none;
+}
+
+.full {
+  width: 100%;
+  text-align: center;
+}

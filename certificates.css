@@ -1,0 +1,95 @@
+/* certificates.css — matches HireLink theme */
+
+.cert-page {
+  margin-top: 32px;
+}
+
+/* HERO */
+.cert-hero {
+  text-align: center;
+  padding: 26px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 16px;
+  box-shadow: 0 6px 26px rgba(0,0,0,0.32);
+  margin-bottom: 34px;
+}
+
+/* VERIFICATION SECTION */
+.verify-section {
+  margin-bottom: 40px;
+}
+
+.verify-bar {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.verify-bar input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e9f1f7;
+}
+
+.verify-msg {
+  margin-top: 10px;
+  min-height: 20px;
+}
+
+/* SAMPLE CERTIFICATE */
+.sample-section {
+  margin-bottom: 40px;
+}
+
+.sample-card {
+  background: rgba(255,255,255,0.02);
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.38);
+  max-width: 420px;
+  margin: auto;
+  text-align: center;
+}
+
+.sample-card h3 {
+  margin-top: 0;
+}
+
+.verify-id {
+  margin-top: 14px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* BENEFITS */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.benefit-card {
+  background: rgba(255,255,255,0.02);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .verify-bar {
+    flex-direction: column;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}

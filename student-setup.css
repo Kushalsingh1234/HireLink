@@ -1,0 +1,74 @@
+/* student-setup.css — matches HireLink theme */
+
+.setup-page {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.setup-box {
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.setup-form .field {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.setup-form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.setup-form input,
+.setup-form select,
+.setup-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e9f1f7;
+}
+.setup-form option{
+    color: black;
+}
+
+/* Skills Tag UI */
+.skills-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.skill-tag {
+  padding: 6px 12px;
+    background:linear-gradient(90deg,#0ea5a4,#06b6d4);color:#02111a;
+
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Upload field */
+input[type="file"] {
+  border: none;
+  padding-left: 0;
+}
+
+/* Button full width */
+.full {
+  width: 100%;
+}

@@ -1,0 +1,153 @@
+/* student-profile.css — matches HireLink theme */
+
+.profile-page {
+  margin-top: 32px;
+}
+
+/* PROFILE HEADER */
+.profile-header {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  background: rgba(255,255,255,0.02);
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.profile-main {
+  flex: 1;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.profile-role {
+  margin: 6px 0;
+  font-size: 1.05rem;
+  color: rgba(230,240,250,0.95);
+}
+
+.profile-price {
+  margin: 4px 0 12px;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.profile-rating {
+  font-size: 1rem;
+  margin-top: 4px;
+  color: gold;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 32px;
+}
+
+.section-title {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* SKILL TAGS */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: rgba(255,255,255,0.05);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #e9f1f7;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* PORTFOLIO */
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.portfolio-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+  transition: transform .18s ease;
+}
+
+.portfolio-gallery img:hover {
+  transform: translateY(-4px);
+}
+
+/* WORK PROOF */
+.proof-links {
+  list-style: none;
+  padding: 0;
+}
+.proof-links a {
+  color: #06b6d4;
+  text-decoration: none;
+}
+.proof-links a:hover {
+  text-decoration: underline;
+}
+
+/* CERTIFICATES */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.cert-card {
+  background: rgba(255,255,255,0.02);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.cert-card h4 {
+  margin: 0 0 4px;
+}
+
+.verify-id {
+  margin-top: 8px;
+  color: #0ea5a4;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 780px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .portfolio-gallery {
+    grid-template-columns: 1fr;
+  }
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}

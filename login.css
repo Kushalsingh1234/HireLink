@@ -1,0 +1,97 @@
+/* login.css — clean, minimal, consistent with HireLink theme */
+
+.login-page {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 28px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.login-form .field {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.login-form input {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e9f1f7;
+}
+
+/* Forgot password button */
+.forgot-row {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.forgot-link {
+  background: none;
+  border: none;
+  color: var(--accent-2);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Overlay Modal */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.hidden {
+  display: none;
+}
+
+.reset-modal {
+  background: rgba(255,255,255,0.02);
+  padding: 28px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+  text-align: center;
+}
+
+.reset-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e9f1f7;
+}
+
+.reset-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}

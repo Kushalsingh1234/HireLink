@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HireLink — Where Learning Meets Earning</title>
+  <meta name="description"
+    content="HireLink connects students and small startups for short micro-projects. Students earn money and receive verified certificates. Startups hire affordable, motivated talent." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="HireLink home"> 
+        <span class="brand-mark">HL</span>
+        <span class="brand-text">HireLink</span>
+      </a>
+
+      <button id="mobileToggle" class="mobile-toggle" aria-expanded="false" aria-controls="mainNav"
+        aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav id="mainNav" class="main-nav" role="navigation" aria-label="Primary">
+        <a href="students.html">Find Students</a>
+        <a href="startups.html">For Startups</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="certificates.html">Certificates</a>
+      </nav>
+
+      <div class="nav-ctas">
+        <a class="btn secondary" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="main" role="main">
+    <!-- HERO with toggle -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <div class="hero-toggle" role="tablist" aria-label="View type">
+          <button id="viewStudent" class="view-btn active" role="tab" aria-selected="true">Students</button>
+          <button id="viewStartup" class="view-btn" role="tab" aria-selected="false">Startups</button>
+        </div>
+
+        <h1 id="hero-heading" class="hero-title">Real projects. Real pay. Verified experience.</h1>
+        <p id="hero-sub" class="hero-sub">
+          Students complete short micro-projects for early-stage startups — earn money, ratings and an employer-signed
+          certificate that proves real work.
+        </p>
+
+        <div class="hero-usp">
+          <strong>Platform USP:</strong>
+          <span>Every completed project issues a <em>verified internship certificate</em> plus payment — a real
+            transcript you can show employers.</span>
+        </div>
+
+        <div class="hero-ctas">
+          <a id="primaryCTA" class="btn primary" href="signup.html">Create student profile</a>
+          <a id="secondaryCTA" class="btn ghost" href="post-offer.html">Post a project</a>
+        </div>
+
+        <ul class="trust">
+          <li><strong>Free for students (beta)</strong></li>
+          <li><strong>Trusted by campus incubators</strong></li>
+          <li><strong>Secure payments (coming soon)</strong></li>
+        </ul>
+      </div>
+
+      <aside class="hero-right" aria-hidden="false">
+        <div class="stats-card">
+          <div class="stat">
+            <div class="stat-value">+420</div>
+            <div class="stat-label">Students</div>
+          </div>
+          <div class="divider"></div>
+          <div class="stat">
+            <div class="stat-value">+180</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="divider"></div>
+          <div class="stat">
+            <div class="stat-value">₹1,200</div>
+            <div class="stat-label">Avg. project</div>
+          </div>
+        </div>
+
+        <div class="cert-highlight" role="note">
+          <div class="cert-title">Verified Certificate</div>
+          <div class="cert-copy">Auto-generated certificate with employer signature & verification ID — ideal for
+            interviews.</div>
+          <a class="btn outline" href="certificates.html">See certificate sample</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="section">
+      <h2 class="section-title">How HireLink works</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Create a portfolio</h3>
+          <p class="muted">Students upload 3–5 samples (images, links or short case notes). Set availability and minimum
+            price.</p>
+        </article>
+        <article class="card">
+          <h3>Get hired or hire</h3>
+          <p class="muted">Startups post micro-projects. Choose a student by portfolio, price and rating.</p>
+        </article>
+        <article class="card">
+          <h3>Deliver → Earn → Certify</h3>
+          <p class="muted">Student delivers work, receives payment and a verified internship certificate saved to their
+            Work Summary.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Feature split (70/30 student-startup default view) -->
+    <section class="section feature-split" aria-hidden="false">
+      <div class="feature-left">
+        <h2 id="featureTitle">Students: Build a verified work history</h2>
+        <p class="muted">Gain practical experience with real clients. Each project increments your Work Summary and adds
+          a certificate recruiters trust.</p>
+        <ul class="bullets">
+          <li>Quick projects tailored to student schedules</li>
+          <li>Low-entry pricing and flexible deadlines</li>
+          <li>Verified certificates to show recruiters</li>
+        </ul>
+        <a class="btn primary" href="signup.html">Create profile — it’s free</a>
+      </div>
+      <div class="feature-right">
+        <h3>Startups: hire talent affordably</h3>
+        <p class="muted">Find motivated students for short tasks — logos, landing pages, content, prototypes — without
+          hiring overhead.</p>
+        <a class="btn ghost" href="post-offer.html">Post a project</a>
+      </div>
+    </section>
+
+    <!-- Featured portfolios -->
+    <section id="portfolio" class="section">
+      <div class="section-head">
+        <h2 class="section-title">Featured student portfolios</h2>
+        <a class="btn secondary" href="students.html">Browse all Students</a>
+      </div>
+
+      <div class="portfolio-grid" aria-live="polite">
+        <!-- placeholders - replace with real assets later -->
+        <article class="portfolio-card">
+          <img src="https://picsum.photos/seed/p1/420/300" alt="Logo sample by Riya">
+          <div class="meta">
+            <h4>Riya Sharma</h4>
+            <div class="muted">Logo designer • Min ₹500</div>
+          </div>
+        </article>
+
+        <article class="portfolio-card">
+          <img src="https://picsum.photos/seed/p2/420/300" alt="Front-end sample by Arjun">
+          <div class="meta">
+            <h4>Arjun Patel</h4>
+            <div class="muted">Frontend • React • Min ₹1,000</div>
+          </div>
+        </article>
+
+        <article class="portfolio-card">
+          <img src="https://picsum.photos/seed/p3/420/300" alt="Content sample by Meera">
+          <div class="meta">
+            <h4>Meera Joshi</h4>
+            <div class="muted">Content writer • SEO • Min ₹400</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA strip -->
+    <section class="cta-strip" aria-hidden="false">
+      <div class="cta-left">
+        <h3>Ready to hire or start working on real projects?</h3>
+        <p class="muted">Create your profile and land your first project in days — not months.</p>
+      </div>
+      <div class="cta-right">
+        <a class="btn primary" href="signup.html">Get started</a>
+        <a class="btn ghost" href="post-offer.html">Post a project</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">© <strong>HireLink</strong></div>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="nav-auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Projects - HireLink</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="active-projects.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">HL</span>
+        <span class="brand-text">HireLink</span>
+      </a>
+
+      <button id="mobileToggle" class="mobile-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+
+      <nav id="mainNav" class="main-nav">
+        <a href="students.html">Find Students</a>
+        <a href="startups.html">For Startups</a>
+        <a href="active-projects.html" class="active">Active Projects</a>
+        <a href="certificates.html">Certificates</a>
+      </nav>
+
+      <div class="nav-ctas">
+        <a class="btn secondary" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container active-projects-page">
+    <section class="projects-hero">
+      <h1>Active Projects</h1>
+      <p class="muted">
+        Explore projects posted by startups and individuals. Apply to projects that match your skills.
+      </p>
+      <div class="hero-meta">
+        <span class="meta-pill" id="totalProjectsCount">0 Projects</span>
+        <span class="meta-pill" id="openProjectsCount">0 Open</span>
+      </div>
+    </section>
+
+    <section id="projectsGrid" class="projects-grid"></section>
+    <p id="emptyProjects" class="muted empty-state hidden">No active projects found yet.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>HireLink</strong></div>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="nav-auth.js"></script>
+  <script type="module" src="active-projects.js"></script>
+</body>
+</html>

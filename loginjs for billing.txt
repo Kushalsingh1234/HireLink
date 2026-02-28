@@ -1,0 +1,61 @@
+import { auth, db } from "./firebase.js";
+import {
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import {
+  doc,
+  getDoc
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+/* =========================
+   LOGIN
+========================= */
+
+const form = document.getElementById("loginForm");
+const msg = document.getElementById("loginMessage");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    const cred = await signInWithEmailAndPassword(auth, email, password);
+
+    const snap = await getDoc(doc(db, "users", cred.user.uid));
+    const role = snap.data().role;
+
+    if (role === "student") {
+      window.location.href = "student-dashboard.html";
+    } else {
+      window.location.href = "startup-dashboard.html";
+    }
+
+  } catch (err) {
+    msg.textContent = err.message;
+  }
+});
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+const sendReset = document.getElementById("sendReset");
+const resetInput = document.getElementById("resetEmail");
+const resetMessage = document.getElementById("resetMessage");
+
+sendReset.addEventListener("click", async () => {
+  if (!resetInput.value) {
+    resetMessage.textContent = "Please enter your email.";
+    return;
+  }
+
+  try {
+    await sendPasswordResetEmail(auth, resetInput.value);
+    resetMessage.textContent = "Reset email sent. Check your inbox.";
+  } catch (e) {
+    resetMessage.textContent = e.message;
+  }
+});

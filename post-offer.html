@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Project — HireLink</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="post-offer.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">HL</span>
+        <span class="brand-text">HireLink</span>
+      </a>
+
+      <button id="mobileToggle" class="mobile-toggle">☰</button>
+
+      <nav id="mainNav" class="main-nav">
+        <a href="students.html">Find Students</a>
+        <a href="startups.html" class="active">For Startups</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="certificates.html">Certificates</a>
+      </nav>
+
+      <div class="nav-ctas">
+       <a class="btn secondary" href="login.html">Login</a>
+        <a class="btn primary" href="signup.html">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container offer-page">
+
+    <!-- PAGE HEADER -->
+    <section class="offer-hero">
+      <h1>Post a new project</h1>
+      <p class="muted">Describe what you need. Students with matching skills will apply within hours.</p>
+    </section>
+
+    <!-- PROJECT FORM -->
+    <form id="offerForm" class="offer-form">
+
+      <!-- STARTUP DETAILS -->
+      <h2 class="section-title">Startup Information</h2>
+
+      <div class="two-cols">
+        <div class="field">
+          <label>Startup Name *</label>
+          <input type="text" id="startupName" required placeholder="e.g. NovaTech Labs">
+        </div>
+
+        <div class="field">
+          <label>Founder / Contact Person *</label>
+          <input type="text" id="contactPerson" required placeholder="e.g. Rohan Verma">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>About Your Startup (optional)</label>
+        <textarea id="startupAbout" rows="3" placeholder="Write a short description about your startup..."></textarea>
+      </div>
+
+      <div class="field">
+        <label>Startup Logo URL (optional)</label>
+        <input type="url" id="startupLogoURL" placeholder="https://example.com/logo.png">
+      </div>
+
+
+      <!-- PROJECT DETAILS -->
+      <h2 class="section-title">Project Details</h2>
+
+      <div class="field">
+        <label>Project Title *</label>
+        <input type="text" id="projectTitle" required placeholder="e.g. Logo Design for New Brand">
+      </div>
+
+      <div class="field">
+        <label>Project Description *</label>
+        <textarea id="projectDescription" rows="4" required placeholder="Describe your project, expectations, style, references, technical details…"></textarea>
+      </div>
+
+
+      <!-- SKILLS + REQUIREMENTS -->
+      <div class="two-cols">
+        <div class="field">
+          <label>Skills Required *</label>
+          <select id="skillsRequired" required>
+            <option value="">Select a skill</option>
+            <option value="design">Logo / Graphic Design</option>
+            <option value="frontend">Frontend Development</option>
+            <option value="backend">Backend Development</option>
+            <option value="content">Content Writing</option>
+            <option value="video">Video Editing</option>
+            <option value="uiux">UI/UX Design</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Minimum Education (optional)</label>
+          <select id="minEducation">
+            <option value="">No minimum</option>
+            <option value="12th">Completed 12th</option>
+            <option value="diploma">Diploma</option>
+            <option value="ug">Undergraduate Student</option>
+            <option value="pg">Postgraduate Student</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="two-cols">
+        <div class="field">
+          <label>Professional Expertise Required</label>
+          <input type="text" id="professionalExpertise" placeholder="e.g. React + UI polish">
+        </div>
+        <div class="field">
+          <label>Experience Required</label>
+          <input type="text" id="experienceRequired" placeholder="e.g. 6+ months or 2 projects">
+        </div>
+      </div>
+
+
+      <!-- BUDGET + DEADLINE -->
+      <div class="two-cols">
+        <div class="field">
+          <label>Budget (₹) *</label>
+          <input type="number" id="budget" required placeholder="e.g. 1500">
+        </div>
+
+        <div class="field">
+          <label>Deadline *</label>
+          <input type="date" id="deadline" required>
+        </div>
+      </div>
+
+
+      <!-- DELIVERABLES -->
+      <div class="field">
+        <label>Deliverables *</label>
+        <textarea id="deliverables" rows="3" required placeholder="List the expected outputs... e.g. Logo files, PDF brand guide, website pages…"></textarea>
+      </div>
+
+
+      <!-- SAMPLE MATERIAL -->
+      <div class="field">
+        <label>Reference Materials (optional)</label>
+        <input type="text" id="referenceLink" placeholder="Paste link to sample or reference file (Drive/Website/Images)">
+      </div>
+
+      <div class="field file-field">
+        <label>Upload Sample Files (optional)</label>
+        <input type="file" id="fileUpload" multiple>
+      </div>
+
+
+      <!-- SUBMIT -->
+      <div class="submit-row">
+        <button class="btn primary" type="submit">Submit Project</button>
+        <p class="muted small">Students will be notified once the project is approved.</p>
+      </div>
+
+    </form>
+
+    <!-- SUCCESS MESSAGE -->
+    <div id="successMessage" class="success hidden">
+      <h2>Project submitted successfully!</h2>
+      <p class="muted">Interested students will apply soon. You can track applications from your dashboard.</p>
+      <a href="students.html" class="btn ghost">Browse Students</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>HireLink</strong></div>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="auth-guard.js"></script>
+  <script type="module" src="nav-auth.js"></script>
+  <script type="module" src="post-offer.js"></script>
+
+</body>
+</html>

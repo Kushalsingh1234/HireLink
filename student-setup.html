@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Setup — HireLink</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="student-setup.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">HL</span>
+        <span class="brand-text">HireLink</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container setup-page">
+
+    <section class="setup-box">
+
+      <h1 class="title">Complete Your Profile</h1>
+      <p class="muted small" style="text-align:center;margin-bottom:18px;">
+        This helps startups understand your skills and match you with projects.
+      </p>
+
+      <form id="setupForm" class="setup-form">
+
+        <!-- PROFILE PHOTO -->
+        <div class="field">
+          <label>Profile Picture (optional)</label>
+          <input type="file" id="profilePhoto" accept="image/*">
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="field">
+          <label>Education *</label>
+          <select id="education" required>
+            <option value="">Select your education level</option>
+            <option value="12th">12th Grade / High School</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Undergraduate">Undergraduate</option>
+            <option value="Postgraduate">Postgraduate</option>
+          </select>
+        </div>
+
+        <!-- ROLE -->
+        <div class="field">
+          <label>Your Role / Profession *</label>
+          <input type="text" id="role" required placeholder="e.g. Frontend Developer, Graphic Designer">
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="field">
+          <label>Experience (optional)</label>
+          <input type="text" id="experience" placeholder="e.g. 6 months freelance">
+        </div>
+
+        <!-- MIN FEES -->
+        <div class="field">
+          <label>Minimum Fees (optional)</label>
+          <input type="number" id="minFee" placeholder="e.g. 500 (in INR)">
+        </div>
+
+        <!-- ONSITE AVAILABILITY -->
+        <div class="field checkbox-field">
+          <label>
+            <input type="checkbox" id="onsiteAvailable">
+            Available for on-site work (if required)
+          </label>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="field">
+          <label>Skills *</label>
+          <div class="skills-box" id="skillsBox"></div>
+          <input type="text" id="skillInput" placeholder="Type a skill and press Enter">
+        </div>
+
+        <!-- ABOUT -->
+        <div class="field">
+          <label>About You *</label>
+          <textarea id="about" rows="4" required
+            placeholder="Tell startups about your strengths, interests, and working style..."></textarea>
+        </div>
+
+        <!-- WORK PROOF -->
+        <div class="field">
+          <label>Work Proof Links (optional)</label>
+          <input type="text" id="workLinks" placeholder="GitHub, Behance, Drive links...">
+        </div>
+
+        <!-- PORTFOLIO -->
+        <!-- PORTFOLIO -->
+        <div class="field">
+          <label>Upload Portfolio Samples (optional)</label>
+          <input type="file" id="portfolioUpload" multiple accept="image/*,video/*,.pdf">
+          <p class="muted small">
+            Images, videos or PDFs. You can add more later from dashboard.
+          </p>
+        </div>
+
+
+        <button class="btn primary full" type="submit">Save & Continue</button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>HireLink</strong></div>
+    </div>
+  </footer>
+
+  <script type="module" src="student-setup.js"></script>
+
+</body>
+
+</html>

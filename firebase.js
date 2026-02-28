@@ -1,0 +1,20 @@
+// firebase.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCi1E7LywU4-87Wiy1Ez4fSVXzKXbAmAJY",
+  authDomain: "hirelink-ffe7f.firebaseapp.com",
+  projectId: "hirelink-ffe7f",
+  storageBucket: "hirelink-ffe7f.firebasestorage.app",
+  messagingSenderId: "866440097578",
+  appId: "1:866440097578:web:f6234a1241090b71903853"
+};
+
+// Initialize Firebase app
+const app = initializeApp(firebaseConfig);
+
+// Initialize services
+export const auth = getAuth(app);
+export const db = getFirestore(app);

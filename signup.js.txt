@@ -1,0 +1,55 @@
+import { auth, db } from "./firebase.js";
+import { createUserWithEmailAndPassword } from
+  "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import { doc, setDoc } from
+  "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+let selectedRole = "student";
+
+const roleStudentBtn = document.getElementById("roleStudent");
+const roleStartupBtn = document.getElementById("roleStartup");
+const startupFields = document.getElementById("startupFields");
+
+roleStudentBtn.onclick = () => {
+  selectedRole = "student";
+  roleStudentBtn.classList.add("active");
+  roleStartupBtn.classList.remove("active");
+  startupFields.classList.add("hidden");
+};
+
+roleStartupBtn.onclick = () => {
+  selectedRole = "startup";
+  roleStartupBtn.classList.add("active");
+  roleStudentBtn.classList.remove("active");
+  startupFields.classList.remove("hidden");
+};
+
+const form = document.getElementById("signupForm");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("fullName").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    const cred = await createUserWithEmailAndPassword(auth, email, password);
+
+    await setDoc(doc(db, "users", cred.user.uid), {
+      name,
+      email,
+      role: selectedRole,
+      createdAt: new Date()
+    });
+
+    if (selectedRole === "student") {
+      window.location.href = "student-setup.html";
+    } else {
+      window.location.href = "startup-dashboard.html";
+    }
+
+  } catch (err) {
+    alert(err.message);
+  }
+});

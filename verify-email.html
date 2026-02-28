@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify Your Email — HireLink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container" style="max-width:520px;margin-top:80px;text-align:center;">
+    <h1>Verify your email</h1>
+
+    <p class="muted" style="margin-top:12px;">
+      We’ve sent a verification link to your email.<br>
+      Please verify your email to continue.
+    </p>
+
+    <div style="margin-top:28px;">
+      <button id="resendBtn" class="btn secondary">Resend verification email</button>
+    </div>
+
+    <div style="margin-top:16px;">
+      <button id="continueBtn" class="btn primary">I’ve verified, continue</button>
+    </div>
+
+    <p id="message" class="muted" style="margin-top:16px;"></p>
+  </main>
+
+  <script type="module" src="verify-email.js"></script>
+</body>
+</html>

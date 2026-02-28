@@ -1,0 +1,133 @@
+.active-projects-page {
+  margin-top: 30px;
+}
+
+.projects-hero {
+  background: rgba(255,255,255,0.02);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+  margin-bottom: 24px;
+}
+
+.projects-hero h1 {
+  margin: 0 0 8px;
+}
+
+.hero-meta {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.meta-pill {
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.28);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.status-tag {
+  white-space: nowrap;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.status-tag.open {
+  background: #22c55e;
+  color: #04150a;
+}
+
+.status-tag.ongoing {
+  background: #38bdf8;
+  color: #04141d;
+}
+
+.startup-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.startup-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg,#0ea5a4,#06b6d4);
+  color: #02111a;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.project-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  font-size: 0.9rem;
+  color: rgba(230,240,250,0.9);
+}
+
+.project-meta div {
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+}
+
+.project-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.empty-state {
+  text-align: center;
+  margin: 28px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .project-meta {
+    grid-template-columns: 1fr;
+  }
+}

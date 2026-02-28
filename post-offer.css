@@ -1,0 +1,84 @@
+/* post-offer.css — matches HireLink theme */
+
+.offer-page {
+  margin-top: 32px;
+}
+
+/* Hero */
+.offer-hero {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.32);
+  margin-bottom: 30px;
+}
+
+/* Form */
+.offer-form {
+  background: rgba(255,255,255,0.02);
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 6px 26px rgba(0,0,0,0.35);
+}
+
+.section-title {
+  margin: 24px 0 14px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.field {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.field input,
+.field textarea,
+.field select {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e9f1f7;
+  font-size: 0.95rem;
+}
+
+.file-field input {
+  border: none;
+}
+
+.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.submit-row {
+  margin-top: 20px;
+}
+
+.success {
+  background: rgba(255,255,255,0.02);
+  padding: 28px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 6px 26px rgba(0,0,0,0.35);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .two-cols {
+    grid-template-columns: 1fr;
+  }
+}

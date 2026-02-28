@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Dashboard — HireLink</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="startup-dashboard.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">HL</span>
+        <span class="brand-text">HireLink</span>
+      </a>
+
+      <button id="mobileToggle" class="mobile-toggle">☰</button>
+
+      <nav id="mainNav" class="main-nav">
+        <a href="students.html">Find Students</a>
+        <a href="startups.html">For Startups</a>
+        <a href="active-projects.html">Active Projects</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="certificates.html">Certificates</a>
+      </nav>
+
+      <div class="nav-ctas">
+       <a class="btn secondary" href="login.html">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container dashboard-page">
+
+    <section class="dashboard-header">
+      <h1>Startup Dashboard</h1>
+      <p class="muted">Manage your projects, track applications, and post new opportunities.</p>
+
+      <div class="project-actions">
+        <a href="post-offer.html" class="btn primary">Post a New Project</a>
+        <a href="active-projects.html" class="btn ghost">Open Active Projects</a>
+      </div>
+    </section>
+
+
+    <!-- OVERVIEW STATS -->
+    <section class="stats-grid">
+
+      <div class="stat-card">
+        <h3 id="totalProjects">0</h3>
+        <p class="muted">Projects Posted</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="activeProjects">0</h3>
+        <p class="muted">Active Projects</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="completedProjects">0</h3>
+        <p class="muted">Completed</p>
+      </div>
+
+    </section>
+
+
+    <!-- PROJECT LIST -->
+    <section class="projects-section">
+      <h2>Your Posted Projects</h2>
+
+      <div id="projectsList" class="projects-list">
+        <!-- Loaded dynamically via JS -->
+      </div>
+
+      <p id="noProjects" class="muted no-projects hidden">You haven't posted any projects yet.</p>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>HireLink</strong></div>
+      <nav class="footer-nav">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="nav-auth.js"></script>
+  <script type="module" src="startup-dashboard.js"></script>
+
+</body>
+</html>
