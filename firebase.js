@@ -4,12 +4,12 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCi1E7LywU4-87Wiy1Ez4fSVXzKXbAmAJY",
-  authDomain: "hirelink-ffe7f.firebaseapp.com",
-  projectId: "hirelink-ffe7f",
-  storageBucket: "hirelink-ffe7f.firebasestorage.app",
-  messagingSenderId: "866440097578",
-  appId: "1:866440097578:web:f6234a1241090b71903853"
+  apiKey: "can't be displayed in public",
+  authDomain: "can't be displayed in public",
+  projectId: "can't be displayed in public",
+  storageBucket: "can't be displayed in public",
+  messagingSenderId: "can't be displayed in public",
+  appId: "can't be displayed in public"
 };
 
 // Initialize Firebase app
@@ -18,3 +18,4 @@ const app = initializeApp(firebaseConfig);
 // Initialize services
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+
